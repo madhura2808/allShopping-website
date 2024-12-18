@@ -290,6 +290,13 @@ body.dark-mode .navbar-actions .dark-mode-toggle {
 body.dark-mode .navbar-actions .dark-mode-toggle:hover {
   background-color: #e67e22;
 }
+/* Navbar Logo for all screens */
+.navbar-logo img {
+  height: auto; /* Maintain aspect ratio */
+  max-height: 50px; /* Restrict maximum height */
+  width: auto; /* Maintain width dynamically */
+  max-width: 100%; /* Prevent overflow */
+}
 
 
 /* Keyframes */
@@ -316,8 +323,8 @@ body.dark-mode .navbar-actions .dark-mode-toggle:hover {
   .navbar {
     flex-direction: column;
     align-items: center; /* Center items for better alignment */
-    padding: 10px 20px;
-    gap: 10px; /* Add spacing between navbar sections */
+    padding: 8px 15px;
+    gap: 12px; /* Add spacing between navbar sections */
   }
 
   .navbar-left {
@@ -339,11 +346,17 @@ body.dark-mode .navbar-actions .dark-mode-toggle:hover {
     text-align: justify; /* Align text for a clean look */
     margin: 0 10px; /* Add horizontal padding */
   }
-
+  .hero-btn {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons */
+    gap: 0.1%; /* Add spacing between buttons */
+  }
   .hero-btn button {
     margin: 5px 0; /* Separate buttons slightly */
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     padding: 8px 12px; /* Keep buttons touch-friendly */
+    width: 100%;
   }
 
   .hero-image {
@@ -357,7 +370,27 @@ body.dark-mode .navbar-actions .dark-mode-toggle:hover {
     max-width: 300px; /* Max width for large images */
     height: auto; /* Maintain aspect ratio */
   }
-}
+
+  .navbar-actions {
+    margin-top: 10px; /* Space above the mode changer */
+  }
+
+  .dark-mode-toggle {
+    font-size: 0.85rem; /* Adjust toggle font size */
+    padding: 6px 8px; /* Compact padding */
+    width: auto; /* Keep toggle button width auto */
+  }
+  .navbar-logo {
+    margin-bottom: 10px; /* Space below the logo */
+    text-align: center;
+  }
+    .navbar-logo img {
+      max-height: 30px; /* Reduce logo size slightly for tablets */
+      margin-bottom: 5px;
+      height: auto; /* Add slight spacing below */
+    }
+  }
+
 
 /* Responsive for Mobile Devices (Max Width: 480px) */
 @media (max-width: 480px) {
@@ -369,7 +402,8 @@ body.dark-mode .navbar-actions .dark-mode-toggle:hover {
   }
 
   .navbar-logo img {
-    height: 30px; /* Smaller logo size for mobile */
+    max-height: 30px; /* Further reduce logo size for mobiles */
+    margin-bottom: 5px; /* Space below the logo */
   }
 
   .hero-content h1 {
