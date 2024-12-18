@@ -311,71 +311,104 @@ body.dark-mode .navbar-actions .dark-mode-toggle:hover {
   }
 }
 
-
+/* Responsive for Tablets (Max Width: 768px) */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* Center items for better alignment */
+    padding: 10px 20px;
+    gap: 10px; /* Add spacing between navbar sections */
   }
 
   .navbar-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* Add slight spacing between logo and buttons */
+  }
+
+  .hero-content h1 {
+    font-size: 1.4rem; /* Slightly smaller font for tablets */
+    text-align: center; /* Center-align for better layout */
     margin-bottom: 10px;
   }
 
-  .hero-content h1 {
-    font-size: 1.5rem;
-  }
-
   .text-wrapper p {
-    font-size: 0.85rem;
+    font-size: 0.9rem; /* Keep text readable */
+    line-height: 1.4; /* Adjust line spacing for clarity */
+    text-align: justify; /* Align text for a clean look */
+    margin: 0 10px; /* Add horizontal padding */
   }
 
   .hero-btn button {
-    margin: 5px 0;
-    font-size: 0.85rem;
+    margin: 5px 0; /* Separate buttons slightly */
+    font-size: 0.9rem;
+    padding: 8px 12px; /* Keep buttons touch-friendly */
   }
 
   .hero-image {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: column; /* Stack images vertically */
+    gap: 15px; /* Space between images */
+    align-items: center; /* Center align images */
   }
 
   .product-image {
-    width: 80%;
-    max-width: 300px;
-    height: auto;
+    width: 85%; /* Restrict image width */
+    max-width: 300px; /* Max width for large images */
+    height: auto; /* Maintain aspect ratio */
   }
 }
 
+/* Responsive for Mobile Devices (Max Width: 480px) */
 @media (max-width: 480px) {
   .navbar {
-    padding: 10px;
+    flex-direction: column;
+    align-items: center; /* Center-align for mobile */
+    padding: 8px 15px; /* Reduce padding */
+    gap: 8px; /* Compact spacing */
   }
 
   .navbar-logo img {
-    height: 35px;
+    height: 30px; /* Smaller logo size for mobile */
   }
 
   .hero-content h1 {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Smaller font for headings */
+    text-align: center; /* Center-align text */
+    margin: 10px 0; /* Space above and below heading */
   }
 
   .text-wrapper p {
-    font-size: 0.75rem;
+    font-size: 0.8rem; /* Reduce font size */
+    line-height: 1.4; /* Adjust line height */
+    text-align: justify;
+    margin: 0 10px; /* Add horizontal padding */
   }
 
   .hero-btn button {
-    font-size: 0.8rem;
-    padding: 5px;
+    font-size: 0.8rem; /* Smaller button text */
+    padding: 6px 10px; /* Compact button size */
+    margin: 5px 0; /* Space buttons evenly */
+    width: 100%; /* Full-width buttons for usability */
   }
 
   .navbar-actions .dark-mode-toggle {
-    font-size: 0.8rem;
-    padding: 5px;
+    font-size: 0.8rem; /* Adjust toggle size */
+    padding: 6px 8px; /* Compact padding */
+    width: auto; /* Auto width for toggle */
+  }
+
+  .hero-image {
+    flex-direction: column; /* Stack images vertically */
+    gap: 12px; /* Reduce gap for compact layout */
+    align-items: center; /* Center-align images */
   }
 
   .product-image {
-    width: 90%;
-    max-width: 250px;
+    width: 90%; /* Limit width for small screens */
+    max-width: 250px; /* Maximum size for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add slight border radius */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for better look */
   }
 }
