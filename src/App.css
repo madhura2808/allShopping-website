@@ -9,10 +9,9 @@
 * {
     margin: 0;
     margin-top: auto;
-    margin-left: auto;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f4f4f4;
+   
 
 }
 
@@ -51,14 +50,14 @@ body {
     text-align: left;
     margin: 10px 0;
     font-size: 1.2em;
-    color: #555;
+    
   }
   
   .right-align {
     text-align: left;
     margin: 10px 0;
     font-size: 1.2em;
-    color: #555;
+    
   }
   
 
@@ -77,7 +76,7 @@ body {
 
 .hero p {
     font-weight: 600;
-    color: var(--gray);
+    
     max-width: 400px;
     line-height: 1.6;
 }
@@ -154,7 +153,7 @@ button:hover {
     gap: 10px;    
     position:absolute; 
   top: 10px; /* Adjust the distance from the top */
-  left: 50%; /* Center horizontally */
+  left: 8%; /* Center horizontally */
    /* Adjusts to truly center it */
   
   font-size: 1rem;
@@ -215,6 +214,84 @@ button:hover {
   background-color: #0056b3;
 }
 
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Align the logo and buttons on the left */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  max-height: 50px;
+}
+
+/* Style the buttons */
+.hero-btn button {
+  margin: 0 5px;
+  padding: 5px 15px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.hero-btn button:hover {
+  background-color: #0056b3;
+}
+
+/* Align the dark mode toggle button on the right */
+.navbar-actions .dark-mode-toggle {
+  padding: 5px 15px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.navbar-actions .dark-mode-toggle:hover {
+  background-color: #0056b3;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .navbar {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+body.dark-mode .hero-btn button {
+  background-color: #f39c12;
+}
+
+body.dark-mode .hero-btn button:hover {
+  background-color: #e67e22;
+}
+
+body.dark-mode .navbar-actions .dark-mode-toggle {
+  background-color: #f39c12;
+}
+
+body.dark-mode .navbar-actions .dark-mode-toggle:hover {
+  background-color: #e67e22;
+}
+
+
 /* Keyframes */
 @keyframes fadeIn {
   from {
@@ -235,46 +312,70 @@ button:hover {
 }
 
 
-
-/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        margin-top: 20px;
-    }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .hero h1 {
-        font-size: 36px;
-    }
+  .navbar-left {
+    margin-bottom: 10px;
+  }
 
-    .hero-content {
-        max-width: 100%;
-        gap: 20px;
-    }
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
 
-    .hero-btn {
-        flex-direction: row;
-        gap: 16px;
-    }
+  .text-wrapper p {
+    font-size: 0.85rem;
+  }
 
-    .hero-image img {
-        width: 100%;
-    }
+  .hero-btn button {
+    margin: 5px 0;
+    font-size: 0.85rem;
+  }
 
-    .top-left-buttons {
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        z-index: 1000;
-    }
+  .hero-image {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    nav ul {
-        display: none; /* Hide menu on small screens */
-    }
+  .product-image {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+  }
+}
 
-   
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar-logo img {
+    height: 35px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.2rem;
+  }
+
+  .text-wrapper p {
+    font-size: 0.75rem;
+  }
+
+  .hero-btn button {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+
+  .navbar-actions .dark-mode-toggle {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+
+  .product-image {
+    width: 90%;
+    max-width: 250px;
+  }
 }
